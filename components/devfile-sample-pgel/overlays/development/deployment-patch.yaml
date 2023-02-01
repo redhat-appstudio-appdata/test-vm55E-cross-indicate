@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-pgel
+  namespace: majackso-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:cca998a3a825923973ee9e351acaa83f8072bdea04f97dfb360d125dfa4300cb
+        name: container-image
+        resources: {}
+status: {}
