@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-pgel
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-pgel
+    app.kubernetes.io/part-of: test
+  name: devfile-sample-pgel
+  namespace: majackso-tenant
+spec:
+  port:
+    targetPort: 3001
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: devfile-sample-pgel
+    weight: 100
+status: {}
