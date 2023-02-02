@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: devfile-sample-pgel
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:majackso-tenant-devfile-sample-pgel
+      - image: quay.io/redhat-appstudio/user-workload@sha256:cca998a3a825923973ee9e351acaa83f8072bdea04f97dfb360d125dfa4300cb
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
